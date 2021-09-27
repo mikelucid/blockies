@@ -1,6 +1,6 @@
 {
     "name": "isaeken/blockies",
-    "version": "1.0",
+    "version": "1.1",
     "description": "php clone of https://github.com/ethereum/blockies",
     "license": "MIT",
     "type": "library",
