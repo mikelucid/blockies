@@ -1,6 +1,8 @@
 
 <?php
 
+namespace IsaEken\Blockies;
+
 class RandomGenerator{
 
 	var $x,$y,$z,$w;
