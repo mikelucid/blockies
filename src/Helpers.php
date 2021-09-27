@@ -7,6 +7,7 @@ namespace IsaEken\Blockies;
 use Intervention\Image\Image;
 use InvalidArgumentException;
 use Spatie\Color\Hsl;
+use RandomGenerator;                                                                                                                                                                                      
 
 class Helpers
 {
@@ -29,19 +30,15 @@ class Helpers
 
         return $canvas;
     }
-
-    /**
-     * @param string|null $seed
-     * @return string
-     */
+    
     public static function seed(string $seed = null): string
     {
         if ($seed == null) {
-            $seed = base_convert(floor(Helpers::randomFloat(0, 1) * pow(10, 16)), 10, 16);
-            $sqrt = sqrt(floatval($seed));
+            $seed = 12345;
+            $seed = new RandomGenerator( $seed );
 
             if ($sqrt > 16 || $sqrt < 8) {
-                return static::seed();
+                return new RandomGenerator( $seed );
             }
 
             return $seed;
