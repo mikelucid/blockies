@@ -7,7 +7,6 @@ namespace IsaEken\Blockies;
 use Intervention\Image\Image;
 use InvalidArgumentException;
 use Spatie\Color\Hsl;
-use RandomGenerator;                                                                                                                                                                                      
 
 class Helpers
 {
